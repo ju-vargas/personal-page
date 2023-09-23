@@ -81,7 +81,7 @@ html, body {
     position: absolute;
     width: 100%; 
     height: 100%;
-    background-image: url(../img/halftone.jpg); /* Substitua com o caminho para sua imagem de meio-tom */
+    background-image: url(assets/img/halftone.jpg); /* Substitua com o caminho para sua imagem de meio-tom */
     background-repeat: repeat; /* Repete o padrão de meio-tom por toda a div */
     background-blend-mode: multiply;
     opacity: 0.2;
@@ -228,7 +228,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center; 
-    background-image: url(../img/circuit.jpg);
+    background-image: url(/assets/img/circuit.jpg);
     background-size: cover;
     filter: grayscale(100);
     
