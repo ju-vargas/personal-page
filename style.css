@@ -7,8 +7,26 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Unbounded', sans-serif;
+}
+
+.cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode:difference;
+}
+
+.cursor-active {
+    transform: scale(4);
 
 }
+
+
 
 .main-grid {
     width: 100%;
@@ -83,6 +101,7 @@ html, body {
     height: 100%;
     background-image: url(assets/img/halftone.jpg); /* Substitua com o caminho para sua imagem de meio-tom */
     background-repeat: repeat; /* Repete o padrão de meio-tom por toda a div */
+    background-attachment: fixed;
     background-blend-mode: multiply;
     opacity: 0.2;
 }
@@ -99,31 +118,32 @@ html, body {
     font-weight: bold;
     font-size: 5rem;
     color: white;
+    margin: 0;
 }
 
 .text-container #subtitle {
     font-size: 1.5rem;
 }
 
-.content-container {
-    width: 100%;
-    height: 280vh;
-    background-color: #192bc2;
-    position: sticky;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 .content-1 {
     width: 100%;
-    height: 150vh;
+    height: 110vh;
+    position: sticky;
+    background-color: #192bc2;
 }
 
 .content-2 {
     width: 100%;
+    height: 40vh;
+    position: sticky;
+    top: 0;
+}
+
+.content-3 {
+    width: 100%;
     height: 130vh;  
+    position: sticky;
 }
 
 .out-me-container {
@@ -186,6 +206,8 @@ html, body {
     text-align: center;
 }
 
+
+
 .tags-container {
     width: 80%;
     height: 100%;
@@ -229,7 +251,9 @@ html, body {
     justify-content: center;
     align-items: center; 
     background-image: url(assets/img/circuit.jpg);
+    background-attachment: fixed;    
     background-size: cover;
+
     filter: grayscale(100);
     
 }
@@ -328,7 +352,58 @@ html, body {
     height: 100%;
     border-radius: 39px 0 0 39px ;
     background-color: #BFF205;
+
 }
+
+#one {
+    animation: w1 5s ease; /* Propriedade de transição */
+} 
+
+#two {
+    animation: w2 4s ease; /* Propriedade de transição */
+} 
+
+#three {
+    animation: w3 3s ease; /* Propriedade de transição */
+} 
+
+#four {
+    animation: w4 2s ease; /* Propriedade de transição */
+} 
+
+@keyframes w1 {
+    from {
+        width: 0; /* Largura inicial */
+    }
+    to {
+        width: 55%; /* Largura final */
+    }
+}
+@keyframes w2 {
+    from {
+        width: 0; /* Largura inicial */
+    }
+    to {
+        width: 50%; /* Largura final */
+    }
+}
+@keyframes w3 {
+    from {
+        width: 0; /* Largura inicial */
+    }
+    to {
+        width: 20%; /* Largura final */
+    }
+}
+@keyframes w4 {
+    from {
+        width: 0; /* Largura inicial */
+    }
+    to {
+        width: 10%; /* Largura final */
+    }
+}
+
 
 .progress:hover {
     background-color: palevioletred;
@@ -349,3 +424,4 @@ html, body {
     font-size: 1vw;
     color: #0f52ba;
 }
+
