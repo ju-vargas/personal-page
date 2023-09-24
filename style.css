@@ -1,0 +1,351 @@
+/* style.css */
+
+html {
+    scroll-behavior: smooth;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Unbounded', sans-serif;
+
+}
+
+.main-grid {
+    width: 100%;
+    height: 320vh;
+    background-color: red;
+}
+
+.social-media-box {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: 0.5vw;
+    padding-right: 0;
+}
+
+.social-media-box img {
+    width: 70%;
+}
+
+.social-media-box a {
+    color:inherit;
+}
+
+.header-container {
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.grid-squares-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* 10 colunas */
+    grid-template-rows: repeat(5, 1fr); /* 5 linhas */
+    gap: 0px; /* Espaço entre os quadrados */
+    position: absolute;
+}
+
+.square {
+    width: 100%; /* Largura de cada quadrado */
+    height: 100%; /* Altura de cada quadrado */
+    background-color: #0000ff; /* Cor de fundo do quadrado */
+}
+
+.permahover {
+    background-color: rgba(2,2,2,0.7);
+    transition: background-color 1s; /* Transição suave da cor de fundo */
+}
+
+.video-container {
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+    
+} 
+
+.video-container video {
+    filter: grayscale(100%);
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+}
+
+.halftone-image {
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    background-image: url(assets/img/halftone.jpg); /* Substitua com o caminho para sua imagem de meio-tom */
+    background-repeat: repeat; /* Repete o padrão de meio-tom por toda a div */
+    background-blend-mode: multiply;
+    opacity: 0.2;
+}
+
+.text-container {
+    color: white;
+    position: absolute;
+    bottom: 25%;
+    left: 8%;
+    
+}
+
+.text-container #title {
+    font-weight: bold;
+    font-size: 5rem;
+    color: white;
+}
+
+.text-container #subtitle {
+    font-size: 1.5rem;
+}
+
+.content-container {
+    width: 100%;
+    height: 280vh;
+    background-color: #192bc2;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-1 {
+    width: 100%;
+    height: 150vh;
+}
+
+.content-2 {
+    width: 100%;
+    height: 130vh;  
+}
+
+.out-me-container {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+}
+
+.me-container {
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+}
+
+.img-me {
+    display: flex;
+    width: 25%;
+    align-items: center;
+    justify-content: end;
+    padding-right: 2%;
+}
+
+.img-me img {
+    width: 70%;
+    border-radius: 50%;
+    filter: grayscale(100);
+}
+
+.text-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+    color: palevioletred;
+}
+
+.text-about:hover {
+    color: #BFF205;
+}
+
+.text-about h1, p{
+    margin: 0;
+}
+.out-tags-container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction:column-reverse; */
+}
+
+.title-section {
+    /* background-color: blueviolet; */
+    color: #BFF205;
+    font-size: 3.5vw;
+    text-align: center;
+}
+
+.tags-container {
+    width: 80%;
+    height: 100%;
+    /* background-color: palevioletred; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* background-color: palevioletred; */
+}
+
+.tag {
+    font-size:  2vw;
+    color:#BFF205;
+
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    border: 2px solid #BFF205;
+    border-radius: 39px;
+    
+    display: inline-block;
+    margin: 0.5%;
+    margin-bottom: 1%;
+
+}
+
+.tag:hover {
+    color:#192bc2;
+    
+    background-color: #BFF205;  
+}
+
+.out-quote-container {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-image: url(assets/img/circuit.jpg);
+    background-size: cover;
+    filter: grayscale(100);
+    
+}
+
+.out-projects-container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #1034a6; 
+}
+
+.projects-container {
+    display: grid;
+    width: 80%;
+    height: 100%;
+    grid-template-columns: repeat(3,1fr); /* 10 colunas */
+    place-items: center;
+}
+
+.card-project {
+    display: flex;
+    height: 60%;
+    width: 80%;
+
+    border: 2px solid #BFF205;
+    border-radius: 20px;   
+    justify-content: center;
+
+    flex-direction: column;
+
+    color: #BFF205;
+}
+
+.card-project:hover {
+    background-color: palevioletred;
+}
+
+.card-project h1 {
+    font-size: 1.5vw ;
+    text-align: center;
+}
+
+.card-project h1 a {
+    color:inherit;
+}
+
+.card-project p {
+    text-align: center;
+    font-size: 1vw;
+    text-overflow: ellipsis;
+}
+
+.out-languages-container {
+    display: flex;
+    width: 100%;
+    height: 65vh;
+    justify-content: center;
+    align-items: center; 
+    background-color: #0f52ba;
+    flex-direction: column; 
+}
+
+.languages-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    align-items: center; 
+}
+
+.language {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.language span {
+    font-size: 1.8vw;
+    color: #BFF205;
+}
+.progress-bar {
+    position: absolute;
+    height: 3vh;
+    width: 50%;
+    border: 2px solid #BFF205;
+    border-radius: 39px; 
+    right: 0;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 39px 0 0 39px ;
+    background-color: #BFF205;
+}
+
+.progress:hover {
+    background-color: palevioletred;
+}
+
+.footer-content {
+    width: 100%;
+    height: 10vh;
+    background-color: palevioletred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.footer-content h1 {
+    margin: 0;
+    font-size: 1vw;
+    color: #0f52ba;
+}
